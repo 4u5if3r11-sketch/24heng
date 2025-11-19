@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <title>Cyberpunk Game Promo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      background-color: #02040A;
+    }
+    
+    @keyframes popIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(-10px);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+    
+    .pop-in {
+      animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes neonSweep {
+      0% { transform: translateX(-20%) translateY(0); }
+      50% { transform: translateX(10%) translateY(2%); }
+      100% { transform: translateX(40%) translateY(0); }
+    }
+
+    @keyframes neonSweep2 {
+      0% { transform: translateX(40%) rotate(-12deg); }
+      50% { transform: translateX(0) rotate(-12deg); }
+      100% { transform: translateX(-40%) rotate(-12deg); }
+    }
+  </style>
+ <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+ <body class="h-full w-full m-0 p-0">
+  <div id="root" class="h-full w-full"></div>
+ <script type="module" src="/index.tsx"></script>
+</body>
+</html>
